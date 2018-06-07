@@ -1,0 +1,58 @@
+/* Options for customizing safari site by site */
+
+/* ---------------------Facebook options---------------------*/
+#pagelet_bookmark_nav, /* Left column: Bookmarks */
+a[href*="lists"], /* Left column: Lists like 'Close Friends' */
+div[id*="ticker"], /* Right column / Chat sidebar: news ticker */
+div[id*="pagelet_games_rhc"], /* Right column: Games and instant games */
+div[id*="stories_pagelet_rhc"], /* Right column: Stories */
+div[id*="pagelet_ego_pane"], /* Right column: Ads? */
+div[id*="pagelet_composer"], /* Right column: experimental? */
+div[id*="pagelet_trending_tags_and_topics"] /* Right column: Trending tags and topics */
+{
+	display: none !important;
+}
+
+/* News feed - Needs visibility:hidden to prevent endless refreshing */
+div[id*="topnews"] { 
+	visibility: hidden !important;
+}
+
+
+
+/* ---------------------Reddit Options---------------------*/
+div[id*="SHORTCUT_FOCUSABLE_DIV"]{
+	letter-spacing: -1.8px;
+}
+div[id*="lightbox"]{
+  opacity: 0;
+
+  -webkit-animation: seconds 1.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 4s;
+
+  animation: seconds 1.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 4s;
+  /*position: relative;
+  background: red;*/
+}
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: -1.8px;
+  }
+}
+@keyframes seconds {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: -1.8px;
+  }
+}
+/*-----------------------------------------------------------*/
